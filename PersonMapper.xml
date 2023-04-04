@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace:名称空间 指定映射对应的接口，全名   resultType 返回值类型-->
+<mapper namespace="com.icss.mapper.PersonMapper">
+    <resultMap id="personResultMap" type="person">
+        <result column="person_id" property="personId"/>
+        <result column="person_name" property="personName"/>
+        <result column="person_pwd" property="personPwd"/>
+    </resultMap>
+    <select id="selectAll" resultMap="personResultMap">
+        select *
+        from person;
+    </select>
+</mapper>
