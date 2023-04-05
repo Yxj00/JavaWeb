@@ -1,49 +1,49 @@
 package com.icss.pojo;
 
 public class Person {
-    private Integer personId;
-    private String  personName;
-    private String personPwd;
+    private String id;
+    private String name;
+    private  Integer age;
 
     public Person() {
     }
 
-    public Person(Integer personId, String personName, String personPwd) {
-        this.personId = personId;
-        this.personName = personName;
-        this.personPwd = personPwd;
+    public Person(String id, String name, Integer age) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
     }
 
-    public Integer getPersonId() {
-        return personId;
+    public String getId() {
+        return id;
     }
 
-    public void setPersonId(Integer personId) {
-        this.personId = personId;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public String getPersonName() {
-        return personName;
+    public String getName() {
+        return name;
     }
 
-    public void setPersonName(String personName) {
-        this.personName = personName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getPersonPwd() {
-        return personPwd;
+    public Integer getAge() {
+        return age;
     }
 
-    public void setPersonPwd(String personPwd) {
-        this.personPwd = personPwd;
+    public void setAge(Integer age) {
+        this.age = age;
     }
 
     @Override
     public String toString() {
         return "Person{" +
-                "personId=" + personId +
-                ", personName='" + personName + '\'' +
-                ", personPwd='" + personPwd + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
                 '}';
     }
 }
