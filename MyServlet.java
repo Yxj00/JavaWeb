@@ -1,30 +1,24 @@
-package com.csi.servlet;
+package com.icss.servlet;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-
+@WebServlet(name = "MyServlet",urlPatterns = "/myServlet")
 public class MyServlet extends HttpServlet {
-    public MyServlet() {
-        System.out.println("我是构造方法");
-    }
-
-
-
     @Override
-    protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("我是servlet方法   我进行实例化请求");
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+       this.doPost(req, resp);
     }
 
     @Override
-    public void destroy() {
-        System.out.println("我是destroy方法");
-    }
-
-    @Override
-    public void init() throws ServletException {
-        System.out.println("我是初始化方法 ");
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        System.out.println("访问了servlet....");
+        String username = req.getParameter("username");
+        String password = req.getParameter("password");
+        resp.getWriter().write("您好，欢迎登录本网站！！！");
+        resp.getWriter().write(username+""+password);
     }
 }
