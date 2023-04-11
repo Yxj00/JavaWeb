@@ -1,17 +1,38 @@
 package com.icss.pojo;
 
 public class User {
-    private Integer id;
+    private int id;
     private String username;
     private String password;
-    private String gender;
-    private String addr;
+    private String name;
+    private String phone;
+    private String email;
 
-    public Integer getId() {
+    public User() {
+    }
+
+    public User(int id, String username, String password, String name, String phone, String email) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.name = name;
+        this.phone = phone;
+        this.email = email;
+    }
+
+    public User(String username, String password, String name, String phone, String email) {
+        this.username = username;
+        this.password = password;
+        this.name = name;
+        this.phone = phone;
+        this.email = email;
+    }
+
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -31,20 +52,28 @@ public class User {
         this.password = password;
     }
 
-    public String getGender() {
-        return gender;
+    public String getName() {
+        return name;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getAddr() {
-        return addr;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setAddr(String addr) {
-        this.addr = addr;
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     @Override
@@ -53,8 +82,9 @@ public class User {
                 "id=" + id +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
-                ", gender='" + gender + '\'' +
-                ", addr='" + addr + '\'' +
+                ", name='" + name + '\'' +
+                ", phone='" + phone + '\'' +
+                ", email='" + email + '\'' +
                 '}';
     }
 }

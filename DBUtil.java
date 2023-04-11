@@ -1,4 +1,4 @@
-package com.csi.util;
+package com.icss.util;
 
 import java.sql.*;
 
@@ -7,7 +7,7 @@ import java.sql.*;
  */
 public class DBUtil {
     public static final String DRIVER="com.mysql.jdbc.Driver";
-    public static final String URL="jdbc:mysql:///s2?useSSL=false&useServerPrepStmts=true";
+    public static final String URL="jdbc:mysql:///pet?useSSL=false&useServerPrepStmts=true";
     public static final String USERNAME="root";
     public static final String PASSWORD="Ygl990206";
     private Connection conn;
